@@ -1,0 +1,5 @@
+⭐,1 time,500,card001,fortune card level 1
+⭐⭐,2 time,1000,card002,fortune card level 2
+⭐⭐⭐,3 time,2500,card003,fortune card level 3
+⭐⭐⭐⭐,5 time,7000,card004,fortune card level 4
+⭐⭐⭐⭐⭐,10 time,20000,card005,fortune card level 5

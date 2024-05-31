@@ -1,0 +1,316 @@
+﻿<Window x:Class="Project.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Project"
+        mc:Ignorable="d"
+        Title="Login" Height="550" Width="600"
+        WindowStartupLocation="CenterScreen">
+
+
+
+    <TabControl x:Name="tabControl">
+        <TabItem x:Name="tabLogin" Header="login">
+            <StackPanel Background="#FFFFF6F6">
+
+                <Grid Height="93">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Content="    Sign Up" Margin="0,25,0,5" FontSize="36" FontFamily="Ewofi Personal Use" HorizontalAlignment="Center" 
+                           Background="Red" 
+               
+               Height="63"
+               Foreground="White"
+               Padding="10" Width="594"/>
+                </Grid>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image x:Name="profile1" Grid.Column="1" Margin="17,17,17,17" Source="/image/profile.jpg"/>
+                </Grid>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="200"/>
+                        <ColumnDefinition Width="400"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label Content="username" Foreground="#FF900000"  Grid.Column="0"  VerticalAlignment="Top" FontSize="24" FontFamily="Ewofi Personal Use" HorizontalAlignment="Left" Margin="87,11,0,0" RenderTransformOrigin="0.216,0.498" Background="#00000000" FontWeight="Regular"/>
+                    <TextBox x:Name="txtUsername" Grid.Column="1" HorizontalAlignment="Left" Margin="21,14,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="232" Height="30" FontSize="22" FontFamily="Comic Sans MS" />
+                </Grid>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="200"/>
+                        <ColumnDefinition Width="400"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Content="password" Grid.Column="0"  Foreground="#FF900000" VerticalAlignment="Top" FontSize="24" FontFamily="Ewofi Personal Use" HorizontalAlignment="Left" Margin="90,11,0,0"/>
+                    <PasswordBox x:Name="txtPassword"  Grid.Column="1" HorizontalAlignment="Left" Margin="21,14,0,0"  VerticalAlignment="Top" Width="232" Height="30" FontSize="22" FontFamily="Comic Sans MS"/>
+                </Grid>
+                <Grid Margin="0,35,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="btnLogin" Content="login" FontSize="18" Click="Button_Click" Grid.Column="1"
+                FontWeight="Bold"
+                Padding="10"
+                BorderBrush="Transparent"
+                Cursor="Hand" Margin="10,0,124,0">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="LightPink"/>
+                                <Setter Property="Foreground" Value="Black"/>
+                                <Setter Property="BorderBrush" Value="Transparent"/>
+                                <Setter Property="BorderThickness" Value="0"/>
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="Button">
+                                            <Border Background="{TemplateBinding Background}" 
+                                        CornerRadius="15" 
+                                        BorderBrush="{TemplateBinding BorderBrush}" 
+                                        BorderThickness="{TemplateBinding BorderThickness}">
+                                                <ContentPresenter HorizontalAlignment="Center" 
+                                                      VerticalAlignment="Center"/>
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#FFFF5C91"/>
+                                    </Trigger>
+                                    <Trigger Property="IsPressed" Value="True">
+                                        <Setter Property="Background" Value="#FF0FBD0F"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                    </Button>
+                    <Button x:Name="btnRegister" Grid.Column="0" Content="register"  FontSize="18" Click="btnRegister_Click" Foreground="White" 
+                Padding="10"
+                BorderBrush="Transparent"
+                Cursor="Hand" Height="30" Margin="119,0,10,0" >
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="#FFFFD3DA"/>
+                                <Setter Property="Foreground" Value="Black"/>
+                                <Setter Property="BorderBrush" Value="Transparent"/>
+                                <Setter Property="BorderThickness" Value="0"/>
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="Button">
+                                            <Border Background="{TemplateBinding Background}" 
+                                                    CornerRadius="15" 
+                                                    BorderBrush="{TemplateBinding BorderBrush}" 
+                                                    BorderThickness="{TemplateBinding BorderThickness}">
+                                                <ContentPresenter HorizontalAlignment="Center" 
+                                  VerticalAlignment="Center"/>
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#FFFF5C91"/>
+                                    </Trigger>
+                                    <Trigger Property="IsPressed" Value="True">
+                                        <Setter Property="Background" Value="#FFFF78BD"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                    </Button>
+                </Grid>
+            </StackPanel>
+        </TabItem>
+        <TabItem x:Name="tabRegister" Header="register" Height="22" Margin="-2,0,-2,0" VerticalAlignment="Bottom">
+            <StackPanel>
+                <Grid Background="#FFE0F1FF">
+                    <Grid Margin="0,0,-6,397">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="18"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Label Content="   Register" FontSize="36" FontFamily="Ewofi Personal Use" HorizontalAlignment="Left" 
+                           Background="#FF0090FF" Width="594" Grid.ColumnSpan="2" Height="63"
+                             Foreground="White"
+                             Padding="10" Margin="0,24,0,24" />
+                    </Grid>
+
+
+                    <Grid Margin="0,89,-6,360">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="100"/>
+                            <ColumnDefinition Width="200"/>
+                            <ColumnDefinition Width="100"/>
+                            <ColumnDefinition Width="200"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Content="name" Grid.Column="0"  VerticalAlignment="Top" FontSize="20" FontFamily="Ewofi Personal Use" HorizontalAlignment="Left" Margin="43,14,0,0" Foreground="Black"/>
+                        <TextBox x:Name="txtName" Grid.Column="1" HorizontalAlignment="Left" Margin="10,14,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="153" Height="30" FontSize="22"/>
+                        <Label Content="surname" Grid.Column="2"  VerticalAlignment="Top" FontSize="20" FontFamily="Ewofi Personal Use" HorizontalAlignment="Left" Margin="0,14,0,0"/>
+                        <TextBox x:Name="txtSurname" Grid.Column="3" HorizontalAlignment="Left" Margin="10,14,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="141" Height="30" FontSize="22"/>
+                    </Grid>
+                    <Grid Margin="0,132,-6,317">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="19*"/>
+                            <ColumnDefinition Width="41*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Content="Account number" Grid.Column="0"  VerticalAlignment="Top" FontSize="20" FontFamily="Ewofi Personal Use" HorizontalAlignment="Left" Margin="42,17,0,0" Height="32" Width="171" Grid.ColumnSpan="2"/>
+                        <TextBox x:Name="txtAccountNumber" HorizontalAlignment="Left" Margin="7,17,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="354" Height="30" FontSize="22" Grid.Column="1"/>
+
+                    </Grid>
+
+                    <Grid Margin="0,189,-6,264">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="150*"/>
+                            <ColumnDefinition Width="80*"/>
+                            <ColumnDefinition Width="120*"/>
+                            <ColumnDefinition Width="170*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Content="age"  VerticalAlignment="Top" FontSize="18" FontFamily="Ewofi Personal Use" HorizontalAlignment="Left" Margin="124,-1,0,0" Height="30" Width="65" Grid.ColumnSpan="2"/>
+                        <ComboBox x:Name="age" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" Width="60" Height="22" Margin="0,3,0,0" SelectionChanged="age_SelectionChanged"/>
+
+                    </Grid>
+                    <Grid Margin="0,227,-6,239">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="185*"/>
+                            <ColumnDefinition Width="142*"/>
+                            <ColumnDefinition Width="273*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Content="sex"  VerticalAlignment="Top" FontSize="18" FontFamily="Ewofi Personal Use" HorizontalAlignment="Left" Margin="126,-8,0,0" Height="30" Width="78" Grid.ColumnSpan="2"/>
+                        <ComboBox x:Name="selectSex" Grid.Column="1" HorizontalAlignment="Left" Margin="4,-4,0,0" VerticalAlignment="Top" Width="122" Height="26" FontSize="14" SelectionChanged="selectSex_SelectionChanged" />
+
+                    </Grid>
+
+                    <Grid Margin="0,265,-6,196">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="286"/>
+                            <ColumnDefinition Width="314"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Content="username" Foreground="#FF0022FF"  VerticalAlignment="Top" FontSize="20" FontFamily="Ewofi Personal Use" HorizontalAlignment="Left" Margin="180,13,0,0" Height="32" Width="96"/>
+                        <TextBox x:Name="txtUsername2" Grid.Column="1" HorizontalAlignment="Left" Margin="10,14,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" Height="30" FontSize="22"/>
+
+                    </Grid>
+                    <Grid Margin="0,309,-6,152">
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="286"/>
+                            <ColumnDefinition Width="314"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Content="password" Foreground="#FF0087FF"  VerticalAlignment="Top" FontSize="20" FontFamily="Ewofi Personal Use" HorizontalAlignment="Left" Margin="182,13,0,0" Height="32" Width="94"/>
+                        <PasswordBox x:Name="txtPassword2"  Grid.Column="1" HorizontalAlignment="Left" Margin="10,14,0,0"  VerticalAlignment="Top" Width="170" Height="30" FontSize="22"/>
+                    </Grid>
+                    <Grid Margin="0,354,-6,98">
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="286"/>
+                            <ColumnDefinition Width="314"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Content="Confirm password" Grid.Column="0" Foreground="#FF0087FF"   VerticalAlignment="Center" FontSize="18" FontFamily="Ewofi Personal Use" HorizontalAlignment="Left" Margin="127,0,0,0" Height="30" Width="149"/>
+                        <PasswordBox x:Name="txtConfirmPassword"  Grid.Column="1" HorizontalAlignment="Left" Margin="10,0,0,0"  VerticalAlignment="Center" Width="170" Height="30" FontSize="22"/>
+                    </Grid>
+                    <Grid Margin="0,400,-6,53">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Button x:Name="btnLoginRegis" Content="login" Margin="222,21,222,0" FontSize="18" Click="btnLoginRegis_Click" Height="34" VerticalAlignment="Top">
+                            <Button.Style>
+                                <Style TargetType="Button">
+                                    <Setter Property="Background" Value="Blue"/>
+                                    <Setter Property="Foreground" Value="White"/>
+                                    <Setter Property="FontWeight" Value="Bold"/>
+                                    <Setter Property="Padding" Value="10,5"/>
+                                    <Setter Property="BorderBrush" Value="Transparent"/>
+                                    <Setter Property="BorderThickness" Value="0"/>
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate TargetType="Button">
+                                                <Border Name="border" Background="{TemplateBinding Background}" CornerRadius="10">
+                                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                                </Border>
+                                                <ControlTemplate.Triggers>
+                                                    <Trigger Property="IsMouseOver" Value="True">
+                                                        <Setter TargetName="border" Property="Background" Value="LightBlue"/>
+                                                    </Trigger>
+                                                    <Trigger Property="IsPressed" Value="True">
+                                                        <Trigger.EnterActions>
+                                                            <BeginStoryboard>
+                                                                <Storyboard>
+                                                                    <ColorAnimation Storyboard.TargetName="border" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" From="Red" To="Blue" Duration="0:0:0.5"/>
+                                                                </Storyboard>
+                                                            </BeginStoryboard>
+                                                        </Trigger.EnterActions>
+                                                    </Trigger>
+                                                </ControlTemplate.Triggers>
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Style>
+                            </Button.Style>
+                        </Button>
+                    </Grid>
+                    <Border BorderBrush="Gray" BorderThickness="1" Margin="80,268,80,99"/>
+                </Grid>
+            </StackPanel>
+        </TabItem>
+        <TabItem x:Name="show" Header="show user">
+            <Grid Background="#FFFFEBFB">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="245*"/>
+                    <ColumnDefinition Width="52*"/>
+                </Grid.ColumnDefinitions>
+                <ListView x:Name="displayData" Grid.Column="0" Margin="10,10,10,31">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn DisplayMemberBinding="{Binding User}" Header="User Name" Width="150"/>
+                            <GridViewColumn DisplayMemberBinding="{Binding FullName}" Header="FullNane" Width="220"/>
+                            <GridViewColumn DisplayMemberBinding="{Binding Age}" Header="Age" Width="70"/>
+
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+                <Button x:Name="btnRefresh" Grid.Column="1" Content="REFRESH" Height="33" Margin="13,53,12,0" VerticalAlignment="Top" Click="btnRefresh_Click" >
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Background" Value="#FFFF00C2"/>
+                            <Setter Property="Foreground" Value="White"/>
+                            <Setter Property="FontWeight" Value="Bold"/>
+                            <Setter Property="Padding" Value="10,5"/>
+                            <Setter Property="BorderBrush" Value="Transparent"/>
+                            <Setter Property="BorderThickness" Value="0"/>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border Name="border" Background="{TemplateBinding Background}" CornerRadius="5">
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Border>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter TargetName="border" Property="Background" Value="#FF66CC"/>
+                                            </Trigger>
+                                            <Trigger Property="IsPressed" Value="True">
+                                                <Trigger.EnterActions>
+                                                    <BeginStoryboard>
+                                                        <Storyboard>
+                                                            <ColorAnimation Storyboard.TargetName="border" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" From="Red" To="Blue" Duration="0:0:0.5"/>
+                                                        </Storyboard>
+                                                    </BeginStoryboard>
+                                                </Trigger.EnterActions>
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </Button.Style>
+                </Button>
+            </Grid>
+        </TabItem>
+    </TabControl>
+
+
+</Window>

@@ -1,0 +1,66 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="_04Reward.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="bglogin.jpg" />
+    <None Remove="bg_login.jpg" />
+    <None Remove="image\00.jpg" />
+    <None Remove="image\0card.jpg" />
+    <None Remove="image\1144.jpg" />
+    <None Remove="image\bgGame.jpg" />
+    <None Remove="image\bggamee.jpg" />
+    <None Remove="image\bglogin.jpg" />
+    <None Remove="image\bgRedeem.jpg" />
+    <None Remove="image\card00.jpg" />
+    <None Remove="image\Card000.jpg" />
+    <None Remove="image\card001.jpg" />
+    <None Remove="image\card002.jpg" />
+    <None Remove="image\card003.jpg" />
+    <None Remove="image\card004.jpg" />
+    <None Remove="image\card005.jpg" />
+    <None Remove="image\card01.jpg" />
+    <None Remove="image\card02.jpg" />
+    <None Remove="image\card03.jpg" />
+    <None Remove="image\card04.jpg" />
+    <None Remove="image\card05.jpg" />
+    <None Remove="image\LuxkyCard01.jpg" />
+    <None Remove="image\profile.jpg" />
+    <None Remove="image\profile01x.png" />
+    <None Remove="image\profile02y.png" />
+    <None Remove="image\user.icns" />
+    <None Remove="profile.jpg" />
+    <None Remove="user.icns" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="image\bggamee.jpg" />
+    <Resource Include="image\Card000.jpg" />
+    <Resource Include="image\card001.jpg" />
+    <Resource Include="image\card002.jpg" />
+    <Resource Include="image\card003.jpg" />
+    <Resource Include="image\card004.jpg" />
+    <Resource Include="image\card005.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="image\bgRedeem.jpg" />
+    <Resource Include="image\card01.jpg" />
+    <Resource Include="image\card02.jpg" />
+    <Resource Include="image\profile.jpg" />
+    <Resource Include="image\profile01x.png" />
+    <Resource Include="image\profile02y.png" />
+    <Resource Include="user.icns" />
+  </ItemGroup>
+
+</Project>
